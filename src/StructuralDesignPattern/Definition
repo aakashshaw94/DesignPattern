@@ -1,0 +1,53 @@
+
+Focus: Class and Object Composition
+Purpose: Help ensure that if one part of a system changes, the entire structure of the system doesn’t need to do the same.
+
+
+Structural design patterns are used to:
+
+✔️ Organize code efficiently.
+
+✔️ Simplify relationships between objects.
+
+✔️ Help systems handle complexity without making them messy.
+
+✔️ Enable objects to work together even if their interfaces don’t match.
+
+
+🔧 Problems Structural Patterns Solve:
+Problem	                                    How Structural Pattern Helps
+-----------------------------------------------------------------------------------
+Complex class relationships	                Provides ways to compose classes neatly.
+Mismatched interfaces	                    Adapter Pattern helps incompatible classes work together.
+Repeated object creation	                Flyweight Pattern saves memory by sharing.
+Adding features without modifying code	    Decorator Pattern adds new behavior dynamically.
+Simplifying subsystems	                    Facade Pattern provides a simple interface to complex systems.
+
+✅ Why They Were Created:
+To reduce tight coupling between classes.
+
+To improve code maintainability and scalability.
+
+To enable object composition over inheritance (preferred in modern design).
+
+To solve real-world architecture problems like UI frameworks, file systems, network protocols, etc.
+
+
+List of Structural Patterns:
+
+Design Pattern	    Purpose
+----------------------------------------
+Adapter	            Converts one interface to another that the client expects.
+
+Bridge	            Decouples an abstraction from its implementation so that the two can vary independently.
+
+Composite	        Composes objects into tree structures to represent part-whole hierarchies.
+
+Decorator	        Attaches additional responsibilities to an object dynamically.
+
+Facade	            Provides a simplified interface to a larger body of code.
+
+Flyweight	        Reduces the cost of creating and manipulating a large number of similar objects.
+
+Proxy	            Provides a surrogate or placeholder for another object to control access to it.
+
