@@ -70,7 +70,7 @@ public class Builder {
         }
 
         // Builder Class
-        public class Builder {
+        public static class Builder {
             private String bun;
             private String sauce;
             private String cheese;
