@@ -1,0 +1,89 @@
+🚀 What is SOLID?
+✅ SOLID is an acronym for 5 object-oriented design principles, aimed at:
+-Writing clean, modular code
+-Making code easier to maintain and scale
+-Reducing bugs due to tight coupling and poor design
+
+📦 What Does SOLID Stand For?
+Principle	                      Meaning	                                Purpose
+S - Single Responsibility	      A class should have only                  Improves cohesion, reduces complexity
+                                  one reason to change
+
+O - Open/Closed	                  Software entities should be open          Allows adding features without touching
+                                  for extension but closed for              existing code
+                                  modification
+
+L - Liskov Substitution	          Subclasses should be replaceable          Ensures polymorphism works correctly
+                                  for their base class
+
+I - Interface Segregation	      Don't force clients to depend on          Encourages small, specific interfaces
+                                  unused interfaces
+
+D - Dependency Inversion	      Depend on abstractions, not on            Promotes decoupled, flexible code through
+                                  concretions	                            interfaces
+
+
+🧱 What Are Design Patterns?
+✅ Design Patterns are proven solutions to common problems in software design.
+They are:
+-Reusable templates
+-Language-independent
+-Not code you copy-paste, but ideas you implement
+
+
+🎯 Purpose of Design Patterns:
+Purpose	                            Description
+Solve common design problems	    Like object creation (Factory), structure (Adapter), behavior (Observer)
+
+Improve reusability	                Well-structured and decoupled components
+
+Provide shared language	            Easier to communicate design with other developers
+
+
+🆚 SOLID vs Design Patterns
+Aspect	                    SOLID Principles	                    Design Patterns
+Definition	                Set of 5 object-oriented                Reusable solutions to recurring design problems
+                            design principles
+
+Purpose	                    Guide how to design classes             Help you solve specific problems in flexible ways
+                            and interfaces
+
+Scope	                    More conceptual, principle-driven	    More implementation-focused, tactical
+
+When Used	                While designing the structure and       While solving design problems like object creation,
+                            responsibility of classes	            communication, structure, etc.
+
+Example	                    "One class should only have one         "Use Strategy pattern to switch algorithms at runtime"
+                            reason to change"
+
+
+🔧 Example:
+Let’s say you’re building a payment system.
+
+Using SOLID:
+
+-You keep the PaymentService focused only on handling payments (SRP).
+
+-You depend on an IPaymentMethod interface (DIP, ISP).
+
+-You can add new payment types without modifying the existing logic (OCP).
+
+Using Design Pattern:
+
+-You implement the Strategy Pattern to inject the correct payment algorithm at runtime.
+
+🧠 In short:
+
+SOLID tells you how to structure your code (principles).
+
+Design Patterns give you reusable solutions (tools) to implement those principles.
+
+
+
+
+🔁 Think of it like this:
+SOLID is about design philosophy.
+Design Patterns are about design execution.
+
+
+
