@@ -103,6 +103,7 @@ public class State {
      * When you want to avoid complex conditionals.
      *
      * When the state transitions are dynamic and scalable.
+     * 
      */
     public interface OrderState {
         void next(OrderContext context);

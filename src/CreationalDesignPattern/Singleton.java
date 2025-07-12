@@ -37,7 +37,7 @@ public class Singleton {
     public class Logger {
 
         // Step 1: Create a private static instance of the class
-        private static Logger singleInstance = null;
+        private Logger singleInstance = null;
 
         // Step 2: Make the constructor private (so no one can create an object from outside)
         private Logger() {
@@ -45,7 +45,7 @@ public class Singleton {
         }
 
         // Step 3: Provide a public static method to get the single instance
-        public static Logger getInstance() {
+        public Logger getInstance() {
             if (singleInstance == null) {
                 singleInstance = new Logger();  // Create the instance if it doesn't exist
             }
@@ -60,7 +60,7 @@ public class Singleton {
     }
 
     public class Main {
-        public static void main(String[] args) {
+        public void main(String[] args) {
             Logger logger1 = Logger.getInstance();
             Logger logger2 = Logger.getInstance();
 
@@ -109,7 +109,7 @@ public class Singleton {
             // Private constructor to prevent instantiation
         }
 
-        public static EagerSingleton getInstance() {
+        public EagerSingleton getInstance() {
             return instance;
         }
     }
@@ -125,11 +125,11 @@ public class Singleton {
 
     public class LazySingleton {
 
-        private static LazySingleton instance;
+        private LazySingleton instance;
 
         private LazySingleton() {}
 
-        public static LazySingleton getInstance() {
+        public LazySingleton getInstance() {
             if (instance == null) {
                 instance = new LazySingleton();
             }
@@ -149,11 +149,11 @@ public class Singleton {
      *
      */
     class ThreadSafeSingleton {
-        private static ThreadSafeSingleton instance;
+        private ThreadSafeSingleton instance;
 
         private ThreadSafeSingleton() {}
 
-        public static synchronized ThreadSafeSingleton getInstance() {
+        public synchronized ThreadSafeSingleton getInstance() {
             if (instance == null) {
                 instance = new ThreadSafeSingleton();
             }
@@ -175,11 +175,11 @@ public class Singleton {
      *
      */
     class DoubleCheckedLockingSingleton {
-        private static volatile DoubleCheckedLockingSingleton instance;
+        private volatile DoubleCheckedLockingSingleton instance;
 
         private DoubleCheckedLockingSingleton() {}
 
-        public static DoubleCheckedLockingSingleton getInstance() {
+        public DoubleCheckedLockingSingleton getInstance() {
             if (instance == null) {
                 synchronized (DoubleCheckedLockingSingleton.class) {
                     if (instance == null) {
@@ -205,11 +205,11 @@ public class Singleton {
     class BillPughSingleton {
         private BillPughSingleton() {}
 
-        private static class SingletonHelper {
-            private static final BillPughSingleton INSTANCE = new BillPughSingleton();
+        private class SingletonHelper {
+            private final BillPughSingleton INSTANCE = new BillPughSingleton();
         }
 
-        public static BillPughSingleton getInstance() {
+        public BillPughSingleton getInstance() {
             return SingletonHelper.INSTANCE;
         }
     }
